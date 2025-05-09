@@ -101,59 +101,61 @@ export default function ProductPage({
                   <p className="text-gray-700 mb-8 min-h-[150px]">{product.description}</p>
 
                   {/* Quantity Selector */}
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="flex items-center border border-gray-300 rounded">
-                      <button 
-                        onClick={() => handleQuantityChange(-1)}
-                        className="px-4 py-2 text-gray-600 hover:bg-gray-100"
-                      >
-                        -
-                      </button>
-                      <span className="w-16 text-center border-x border-gray-300 text-black">
-                        {quantity}
-                      </span>
-                      <button 
-                        onClick={() => handleQuantityChange(1)}
-                        className="px-4 py-2 text-gray-600 hover:bg-gray-100"
-                      >
-                        +
-                      </button>
+                  <div className="flex flex-col gap-4 mb-6">
+                    <div className="flex gap-4">
+                      <div className="flex items-center border border-gray-300 rounded w-[200px]">
+                        <button 
+                          onClick={() => handleQuantityChange(-1)}
+                          className="px-4 py-2 text-gray-600 hover:bg-gray-100"
+                        >
+                          -
+                        </button>
+                        <span className="flex-1 text-center border-x border-gray-300 text-black">
+                          {quantity}
+                        </span>
+                        <button 
+                          onClick={() => handleQuantityChange(1)}
+                          className="px-4 py-2 text-gray-600 hover:bg-gray-100"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      {/* Size Selector */}
+                      <div className="relative w-[200px]">
+                        <select 
+                          className="w-full appearance-none border border-gray-300 rounded px-4 py-2 pr-8 bg-white text-black"
+                          value={selectedSize}
+                          onChange={(e) => setSelectedSize(e.target.value)}
+                        >
+                          <option>XL</option>
+                          <option>L</option>
+                          <option>M</option>
+                          <option>S</option>
+                        </select>
+                      </div>
                     </div>
 
-                    {/* Size Selector */}
-                    <div className="relative">
-                      <select 
-                        className="appearance-none border border-gray-300 rounded px-4 py-2 pr-8 bg-white text-black"
-                        value={selectedSize}
-                        onChange={(e) => setSelectedSize(e.target.value)}
+                    {/* Action Buttons */}
+                    <div className="flex gap-4">
+                      <button 
+                        onClick={handleAddToCart}
+                        className="w-[200px] bg-black text-white py-3 px-6 rounded hover:bg-gray-900"
                       >
-                        <option>XL</option>
-                        <option>L</option>
-                        <option>M</option>
-                        <option>S</option>
-                      </select>
+                        Add to Cart
+                      </button>
+                      <button 
+                        onClick={handleBuyNow}
+                        className="w-[200px] bg-blue-500 text-white py-3 px-6 rounded hover:bg-blue-600"
+                      >
+                        Buy Now
+                      </button>
                     </div>
                   </div>
 
                   {/* Model Info */}
                   <div className="text-sm text-gray-500 mb-8">
                     Height of model: 189 cm. / 6&apos;2&quot; Size 41
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-4">
-                    <button 
-                      onClick={handleAddToCart}
-                      className="flex-1 bg-black text-white py-3 px-6 rounded hover:bg-gray-900"
-                    >
-                      Add to Cart
-                    </button>
-                    <button 
-                      onClick={handleBuyNow}
-                      className="flex-1 bg-blue-500 text-white py-3 px-6 rounded hover:bg-blue-600"
-                    >
-                      Buy Now
-                    </button>
                   </div>
                 </div>
               </div>

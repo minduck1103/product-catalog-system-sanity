@@ -24,7 +24,7 @@ NEXT_PUBLIC_SANITY_USE_CDN=true
 1. Clone the repository:
 ```bash
 git clone <https://github.com/minduck1103/product-catalog-system-sanity.git>
-cd <>
+cd <product-catalog-system-sanity>
 ```
 
 2. Install frontend dependencies:
@@ -67,19 +67,6 @@ npm run dev
 The frontend will be available at `http://localhost:3000`
 Sanity Studio will be available at `http://localhost:3333`
 
-## Project Structure
-
-```
-├── frontend/           # Next.js frontend application
-│   ├── app/           # App router components
-│   ├── components/    # Reusable components
-│   ├── lib/          # Utility functions and configurations
-│   └── public/       # Static assets
-│
-└── sanity_app/       # Sanity Studio
-    ├── schemas/      # Content type definitions
-    └── structure/    # Desk structure customization
-```
 
 ## Features
 
