@@ -1,0 +1,23 @@
+{
+  "name": "sanity-backend",
+  "version": "1.0.0",
+  "description": "Sanity backend for Product Catalog System",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@sanity/cli": "^3.0.0",
+    "sanity": "^3.0.0",
+    "styled-components": "^6.1.15",
+    "@sanity/vision": "^3.0.0",
+    "@sanity/image-url": "^1.0.2"
+  }
+}
